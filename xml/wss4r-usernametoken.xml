@@ -1,0 +1,22 @@
+<env:Envelope xmlns:xenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<env:Header>
+		<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" env:mustUnderstand="1">
+			<wsu:Timestamp wsu:Id="27478956">
+				<wsu:Created>2005-12-16T14:56:55Z</wsu:Created>
+				<wsu:Expires>2005-12-16T15:01:55Z</wsu:Expires>
+			</wsu:Timestamp>
+			<wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-27476256">
+				<wsse:Username>Ron</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">CfRwEo2q44DUiTn/pL6Fptmjf/A=</wsse:Password>
+				<wsse:Nonce>rmFsAWfKtSwXHN1Q84HufQ==</wsse:Nonce>
+				<wsu:Created>2005-12-16T13:56:55Z</wsu:Created>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</env:Header>
+	<env:Body>
+		<n1:Ping xmlns:n1="http://xmlsoap.org/Ping">
+			<n1:ticket>SUNW</n1:ticket>
+			<n1:text>Toller Test!</n1:text>
+		</n1:Ping>
+	</env:Body>
+</env:Envelope>

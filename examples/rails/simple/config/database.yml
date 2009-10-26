@@ -1,0 +1,11 @@
+development:
+  adapter: sqlite3
+  dbfile: databases/keys.db
+
+test:
+  adapter: sqlite3
+  dbfile: databases/test.db
+
+production:
+  adapter: sqlite3
+  dbfile: databases/prod.db

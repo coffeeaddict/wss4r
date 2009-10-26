@@ -1,0 +1,14 @@
+Generate CSR:
+openssl req -new -keyout serverkey.pem -out serverreq.pem -days 720
+
+Generate Cert:
+openssl x509 -req -days 720 -in serverreq.pem -signkey serverkey.pem -out server.crt
+
+Generate PFX:
+openssl pkcs12 -inkey serverkey.pem -in client.crt -out client.pfx -export
+
+Remove passphrase from private key:
+openssl rsa -in serverkey.pem -out server.key
+
+Export key from pfx:
+openssl pkcs12 -in server.cer -nocerts -out server.key

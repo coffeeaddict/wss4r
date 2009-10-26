@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:ActionWebService" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="urn:ActionWebService" name="SimpleService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="test">
+    <wsdl:part name="param0" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="testResponse">
+    <wsdl:part name="return" type="s:string" />
+  </wsdl:message>
+  <wsdl:portType name="SimpleServiceSimpleServicePort">
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:test" />
+      <wsdl:output message="tns:testResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SimpleServiceSimpleServiceBinding" type="tns:SimpleServiceSimpleServicePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="test">
+      <soap:operation soapAction="/simple_service/api/test" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ActionWebService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ActionWebService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SimpleServiceService">
+    <wsdl:port name="SimpleServiceSimpleServicePort" binding="tns:SimpleServiceSimpleServiceBinding">
+      <soap:address location="http://localhost:3000/simple_service/api" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

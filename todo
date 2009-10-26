@@ -1,0 +1,29 @@
+TODO:
+
+ 	-check validation of incoming/outgoing certificates
+ 	-generate error message according to ws-specs
+ 	-WS-Time auf Gültigkeit prüfen
+ 	-UsernameToken
+	
+	+Implement Signature+Encryption
+ 		-Encryption->Signature
+ 			BinarySecurityToken
+			Signature
+			EncryptedKey
+	
+		-Signature->Encryption
+			EncryptedKey
+			BinarySecurityToken
+			Signature
+			
+	-Resolver aus den Implementierungsklassen rausziehen
+	
+	-OpenSSL-Teile in einer zentralen Klasse kapseln
+	
+	-Authentifizierung mit UsernameToken gegen LDAP?
+	
+	-Unit-Tests
+	
+	+Timestamp in Klasse kapseln
+	
+	+Logging

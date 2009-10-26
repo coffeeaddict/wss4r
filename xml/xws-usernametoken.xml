@@ -1,0 +1,18 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns0="http://xmlsoap.org/Ping" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<env:Header>
+		<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" env:mustUnderstand="1">
+			<wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="XWSSGID-1134745246218-1629518971">
+				<wsse:Username>Ron</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">E7Y/cmgSvjjYEoMPVANrFfej85A=</wsse:Password>
+				<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">1xT4705Rt75IFuOehOxXdfT+</wsse:Nonce>
+				<wsu:Created>2005-12-16T15:00:47Z</wsu:Created>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</env:Header>
+	<env:Body>
+		<ns0:Ping>
+			<ns0:ticket>SUNW</ns0:ticket>
+			<ns0:text>Hello !</ns0:text>
+		</ns0:Ping>
+	</env:Body>
+</env:Envelope>

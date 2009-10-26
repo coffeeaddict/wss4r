@@ -1,0 +1,21 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soap:Header>
+		<wsse:Security soap:mustUnderstand="1">
+			<wsu:Timestamp wsu:Id="Timestamp-56675798-9e90-4eec-a669-f73ef4af8f24">
+				<wsu:Created>2005-09-08T13:04:38Z</wsu:Created>
+				<wsu:Expires>2005-09-08T13:09:38Z</wsu:Expires>
+			</wsu:Timestamp>
+			<wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-557b190f-d6d1-4b8c-89fe-5e52c5b58fc9">
+				<wsse:Username>schmitt</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">p31d+LzJmY850xbTOxC/dgCtJGk=</wsse:Password>
+				<wsse:Nonce>IAP6dxh++pJLECtDN+vt3w==</wsse:Nonce>
+				<wsu:Created>2005-09-08T13:04:38Z</wsu:Created>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soap:Header>
+	<soap:Body>
+		<SayHello xmlns="http://localhost/WebService/">
+			<name>test</name>
+		</SayHello>
+	</soap:Body>
+</soap:Envelope>

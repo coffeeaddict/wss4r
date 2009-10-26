@@ -1,0 +1,8 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+	<env:Body>
+		<n1:Ping xmlns:n1="http://xmlsoap.org/Ping">
+			<n1:ticket>SUNW</n1:ticket>
+			<n1:text>   Toller Test!   </n1:text>
+		</n1:Ping>
+	</env:Body>
+</env:Envelope>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<env:Header>
+		<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" env:mustUnderstand="1"></wsse:Security>
+	</env:Header>
+	<env:Body>
+		<n1:Ping xmlns:n1="http://xmlsoap.org/Ping">
+			<n1:ticket>SUNW</n1:ticket>
+			<n1:text>   Toller Test!   </n1:text>
+		</n1:Ping>
+	</env:Body>
+</env:Envelope>

@@ -1,0 +1,11 @@
+0.5
+
+* Added support for 128 bit AES encryption, use enc_data.sessionkey_algorithm = Types::ALGORITHM_AES128_CBC (Thanks to Robert Egglestone)
+* Support for private key files with passphrase
+* Fix bug when using certificates where the subjectKeyIdentifier not in extension 2 (Thanks to Robert Egglestone)
+* Support for UsernameToken with plain text passwords (Thanks to Andrew Wright)
+* Fix bug when generating hash values
+* Support for the Amazon Flexible Payment Service
+* Support for ruby 1.8.6, Patch 0 to Patch 110
+* No dependencies to soap4r, log4r and REXML, use the versions in core ruby distribution
+* Various other bug fixes

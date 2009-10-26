@@ -1,0 +1,3 @@
+Zusammenfassen von Cert/Key zum Import in Windoof:
+----------------------------------------------------
+openssl>pkcs12 -certfile cacertchain.pem -inkey keyfile.pem -in certfile.pem -out pfxfile.pfx -name Mustermann -export
